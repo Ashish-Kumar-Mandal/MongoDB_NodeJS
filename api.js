@@ -27,4 +27,14 @@ app.put('/', async (req, res)=>{
     res.send(msg)
 });
 
+app.delete('/', async (req, res)=>{
+    let condition = req.query   // It take condition data in json format from url.
+    let cc = await dbc('products')
+    let result = await cc.deleteMany(condition)
+    console.log(result)
+    let msg = ""
+    result.acknowledged ? result.deletedCount>0 ? msg = result.deletedCount+" Records Deleted Successfully" : msg = "Records Not Found" : msg = "Deletion Failed"  
+    res.send(msg)
+});
+
 app.listen(4545);
