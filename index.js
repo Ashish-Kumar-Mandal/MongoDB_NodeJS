@@ -39,7 +39,7 @@ const deleteData = async (collectionName,condition)=>{
     }
 }
 
-// setData('products',{"name":"Vivo pro 9", "brand":"Vivo", "price":10999});
+// setData('products',{"name":"Vivo pro 15", "brand":"Vivo", "price":15999});
 
 // putData('products',{"name":"Shiva"},{"name":"Vivo Hexa", "brand":"Vivo", "price":9999});
 
